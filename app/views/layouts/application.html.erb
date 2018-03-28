@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bike4Life</title>
+  <title>B4U</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,6 +13,7 @@
    <%= yield %>
     </div>
   <%= render 'layouts/footer' %>
+  <% debug(params) if Rails.env.developement? %>
 
 </body>
 </html>
