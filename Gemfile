@@ -38,19 +38,16 @@ gem 'spring'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :developement, :test do
-	gem 'sqlite3'
-end
-
-
 #gem 'byebug'
-
-
-group :production do
-gem 'pg', '~> 0.19.0'
-gem 'rails_12factor'
-end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
