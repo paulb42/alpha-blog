@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+# Use sqlite3 as the database for Active Record
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
@@ -38,16 +39,28 @@ gem 'spring'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :developement, :test do
+gem 'sqlite3'
+
+
 #gem 'byebug'
+
+
+
+
+
+
+
+
+
+
+
+group :production do
+gem 'pg', '~> 0.19.0'
+gem 'rails_12factor'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development do
-	gem 'sqlite3'
-end
-
-group :production do
-	gem 'pg'
-	gem 'rails_12factor'
 end
